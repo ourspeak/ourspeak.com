@@ -1,0 +1,19 @@
+{
+  "name": "ourspeak",
+  "private": true,
+  "main": "index.html",
+  "author": "turing <o.u.turing@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "less": "node_modules/.bin/lessc -x less/ourspeak.less css/ourspeak.min.css",
+    "serve": "node_modules/.bin/serve --no-less .",
+    "watch": "node_modules/.bin/rewatch less/*.less -c 'npm run less'",
+    "dev": "npm run serve & npm run watch",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "less": "^2.1.2",
+    "rewatch": "~0.2.2",
+    "serve": "~1.4.0"
+  }
+}
